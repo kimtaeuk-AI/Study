@@ -6,12 +6,20 @@
 ''' 
 
 n,m,k = map(int, input().split())
-data = list(map(int, input().split()))
+data = list(map(int, input().split())) # list로 받아야 sort 가능 
+# 위에 n m k 는 3개를 불러와서 list형식인가보다
+# data는 한번에 여러개 데이터를 불러온다. 
 
 data.sort()
+print(n)
+print(m)
+print(k)
+
 first = data[n-1] # 가장 큰수
 second = data[n-2] # 두번째로 큰수 
-
+print(first)
+print(second)
+'''
 result = 0 
 
 while True :
@@ -26,3 +34,4 @@ while True :
     m -= 1 # 더할 때마다 1씩 빼기
 
 print(result)
+'''
