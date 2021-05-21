@@ -10,28 +10,27 @@ data = list(map(int, input().split())) # list로 받아야 sort 가능
 # 위에 n m k 는 3개를 불러와서 list형식인가보다
 # data는 한번에 여러개 데이터를 불러온다. 
 
-data.sort()
-print(n)
-print(m)
-print(k)
+# 5 8 3
+# 2 4 5 4 6
 
-first = data[n-1] # 가장 큰수
-second = data[n-2] # 두번째로 큰수 
-print(first)
-print(second)
-'''
+data.sort()
+
+first = data[n-1] # 가장 큰수 2 4 5 4 6 에서 6을 불러온다
+second = data[n-2] # 두번째로 큰수 2 4 5 4 6 에서 5를 불러온다.
+
 result = 0 
 
 while True :
     for i in range(k): # 가장 큰 수를 K번 더하기
         if m == 0 : # m이 0이라면 반복문 탈출
             break
-        result += first 
+        result += first  # k가 3이니까 3 , 2 , 1 -> 총 3번을 first(제일큰값)을 더해준다.
+
         m -= 1 # 더할 때마다 1씩 빼기
+    
     if m == 0:
         break
     result += second # 두번째로 큰 수를 한 번 더하기
     m -= 1 # 더할 때마다 1씩 빼기
 
 print(result)
-'''
